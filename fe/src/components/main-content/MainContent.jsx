@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './mainContent.scss'
 import data from '../../data.js'
 import Cards from '../cards/Cards'
+import Title from '../title/Title';
 
 
 class MainContent extends Component {
@@ -11,9 +12,13 @@ class MainContent extends Component {
             data: data,
             field: [],
             pressure: [],
-            torque: []
+            torque: [],
+            title: ''
         }
     }
+
+    title = e => this.setState({title: e.target.value})
+    
     fieldData = e => {
       if(data.nameF === e.target.value){
         this.setState({ field: data.procF })
@@ -34,35 +39,26 @@ class MainContent extends Component {
 
         return (
             <div className='main-content'>
-              <div className='control-container'>
+                  <Title title={this.title}></Title>
 
-                
-              
                   {
                   <div className='button-container'>
-                    
-                      <button type='button' onClick={this.fieldData} value={'Field'} className='button field' render={<Cards field={field}></Cards>}>Field</button>
-                    
-                      <button type='button'  onClick={this.pressureData} value={'Pressure'} className='button pressure' render={<Cards pressure={pressure}></Cards>}>Pressure</button>
 
-                      <button type='button'  onClick={this.torqueData} value={'Torque'} className='button torque' render={<Cards torque={torque}></Cards>}>Torque</button>
+                    
+                      <input type='button' onClick={this.fieldData} value={'Field'} className='button field' render={<Cards field={field}></Cards>} render={<Title title={data.nameF}></Title>}></input>
+
+                      <input type='button'  onClick={this.pressureData} value={'Pressure'} className='button pressure' render={<Cards pressure={pressure}></Cards>}></input>
+
+                      <input type='button'  onClick={this.torqueData} value={'Torque'} className='button torque' render={<Cards torque={torque}></Cards>} render={<Title title={data.nameT}></Title>}></input>
+
+                      
                   </div>
                   }
 
-                </div>
-
                   <div className="cards-container">
-
-                    {/* <div className="title-container">
-                      <h2 className='proc-title'>Field Database Procedure</h2>
-                    </div> */}
-
                       <Cards field={field}></Cards>
-                  
-                    
                   </div>
   
-                {/* </div> */}
           </div>
         );
     }
