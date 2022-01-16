@@ -9,6 +9,11 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 62.5%;
+  
+  /* typography */
+  --pc: #1e90ff;
+  --pcd: #70b3f5;
+  background-color: #ffffff;
 }
 
 
@@ -37,14 +42,13 @@ button:hover{
   cursor: pointer;
 }
 
-ul{
-  /* text-indent: 0; */
-}
 
 li{
   list-style: none;
   /* text-indent: 0; */
 }
+
+
 
 
 

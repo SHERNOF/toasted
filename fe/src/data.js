@@ -1,47 +1,74 @@
-const data = [
-        field = 
-    [
+const data = {  
+    idF: 1,
+    nameF: 'Field',  
+    procF: [
         {
-            f1: 1,
-            stepf: 'Open the Field shortcut from the desktop',
-            image: 'fe/public/assets/field/1.jpeg'
+            id: 1,
+            step: 'Open the Field shortcut from the desktop',
+            imageUrl: '/images/field/1.jpeg'
         },
         {
-            f1: 2,
-            stepf: 'Select the job assigned from the list of jobs',
-            image: 'fe/public/assets/field/2.jpeg'
+            id: 2,
+            step: 'Select the job assigned from the list of jobs',
+            imageUrl: '/images/field/2.jpeg'
+        },
+        {
+            id: 3,
+            step: 'Select the job assigned from the list of jobs',
+            imageUrl: '/images/field/2.jpeg'
+        },
+        {
+            id: 4,
+            step: 'Select the job assigned from the list of jobs',
+            imageUrl: '/images/field/2.jpeg'
+        },
+        {
+            id: 5,
+            step: 'Select the job assigned from the list of jobs',
+            imageUrl: '/images/field/2.jpeg'
+        },
+        {
+            id: 6,
+            step: 'Select the job assigned from the list of jobs',
+            imageUrl: '/images/field/2.jpeg'
         },
     ],
-    [
-        pressure = 
-        [
+    
+    idP: 2,
+    nameP: 'Pressure',
+    procP: [
             {
-                p1: 1,
-                stepp: 'Open the Toast shortcut from the desktop',
-                image: 'fe/public/assets/pressure/3.jpeg'
+                id: 1,
+                step: 'Open the Toast shortcut from the desktop',
+                imageUrl: '/images/pressure/3.jpeg'
             },
             {
-                p1: 2,
-                stepp: 'Select pressure from the selection window',
-                image: 'fe/public/assets/pressure/4.jpeg'
+                id: 2,
+                step: 'Select pressure from the selection window',
+                imageUrl: '/images/pressure/4.jpeg'
             },
             {
-                p1: 3,
-                stepp: 'Define NATA or non-NATA type of calibration from the customer',
-                image: ''
+                id: 3,
+                step: 'Define NATA or non-NATA type of calibration from the customer',
+                imageUrl: '/images/pressure/3.jpeg'
             },
     ],
-    [
-        torque = 
+    
+    idT: 3,
+    nameT: 'Torque',
+    procT: [
             {
-                t1: 1,
-                stept: 'Open the Toast shortcut from the desktop',
-                image: 'fe/public/assets/torque/5.jpeg'
+                id: 1,
+                step: 'Open the Toast shortcut from the desktop',
+                imageUrl: '/images/torque/6.jpeg'
             },
             {
-                t1: 2,
-                stept: 'Select pressure from the selection window',
-                image: 'fe/public/assets/torque/6.jpeg'
+                id: 2,
+                step: 'Select pressure from the selection window',
+                imageUrl: '/images/torque/6.jpeg'
             },
     ]
-]
+}
+
+
+export default data
