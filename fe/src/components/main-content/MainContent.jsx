@@ -17,35 +17,38 @@ class MainContent extends Component {
         }
     }
 
-    title = e => this.setState({title: e.target.value})
+    
+    
     
     fieldData = e => {
       if(data.nameF === e.target.value){
-        this.setState({ field: data.procF })
+        this.setState({ field: data.procF, title: e.target.value });
+        
       }
     }
     pressureData = e => {
       if(data.nameP === e.target.value){
-        this.setState({ field: data.procP })
+        this.setState({ field: data.procP, title: e.target.value })
       }
     }
     torqueData = e => {
       if(data.nameT === e.target.value){
-        this.setState({ field: data.procT })
+        this.setState({ field: data.procT, title: e.target.value })
       }
     }
     render() {
-        const { data, field, pressure, torque } = this.state
+        const { data, field, pressure, torque, title } = this.state
+        console.log(title)
 
         return (
             <div className='main-content'>
-                  <Title title={this.title}></Title>
+                  <Title title={title}></Title>
 
                   {
                   <div className='button-container'>
 
                     
-                      <input type='button' onClick={this.fieldData} value={'Field'} className='button field' render={<Cards field={field}></Cards>} render={<Title title={data.nameF}></Title>}></input>
+                      <input type='button' onClick={this.fieldData} value={'Field'} className='button field' render={<Cards field={field}></Cards>} ></input>
 
                       <input type='button'  onClick={this.pressureData} value={'Pressure'} className='button pressure' render={<Cards pressure={pressure}></Cards>}></input>
 

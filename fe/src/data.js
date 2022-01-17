@@ -5,21 +5,21 @@ const data = {
         {
             id: 1,
             step: 'Open the Field shortcut from the desktop',
-            imageUrl: '/images/field/1.jpeg'
+            imageUrl: '/images/field/1.PNG'
         },
         {
             id: 2,
-            step: 'Select the job assigned from the list of jobs',
-            imageUrl: '/images/field/2.jpeg'
+            step: 'Press the DOWNLOAD button to ensure you have the latest job list. Select the job that needs to be done',
+            imageUrl: '/images/field/2.PNG'
         },
         {
             id: 3,
-            step: 'Select the job assigned from the list of jobs',
-            imageUrl: '/images/field/2.jpeg'
+            step: 'Select the job assigned from the list of jobs. Click the jobs.csv button, then click the START JOB button',
+            imageUrl: '/images/field/3.PNG'
         },
         {
             id: 4,
-            step: 'Select the job assigned from the list of jobs',
+            step: 'Accomplish the JSA',
             imageUrl: '/images/field/2.jpeg'
         },
         {
