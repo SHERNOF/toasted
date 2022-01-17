@@ -13,7 +13,8 @@ class MainContent extends Component {
             field: [],
             pressure: [],
             torque: [],
-            title: ''
+            title: '',
+            proc:[]
         }
     }
 
@@ -36,33 +37,48 @@ class MainContent extends Component {
         this.setState({ field: data.procT, title: e.target.value })
       }
     }
+
+    testing = e => {
+      if(data.procs[0].category === e.target.value){
+        const a = data.procs.filter( x => x.category)
+        this.setState({ procs: a })
+      }
+    }
     render() {
-        const { data, field, pressure, torque, title } = this.state
-        console.log(title)
+        const { data, procs,  } = this.state
+        console.log(procs)
 
         return (
-            <div className='main-content'>
-                  <Title title={title}></Title>
+          
+          <div className='main-content'>
+            
+            
+              <div className="title-container">
+                <h2 className='proc-title'>Title</h2>
+              </div>
 
-                  {
-                  <div className='button-container'>
+            
+              <div className='button-container'>
+                  <input type='button' onClick={this.testing} value={data.procs[0].category} className='button field'></input>
 
-                    
-                      <input type='button' onClick={this.fieldData} value={'Field'} className='button field' render={<Cards field={field}></Cards>} ></input>
+                  <input type='button' value={data.procs[6].category}   className='button pressure' ></input>
 
-                      <input type='button'  onClick={this.pressureData} value={'Pressure'} className='button pressure' render={<Cards pressure={pressure}></Cards>}></input>
+                  <input type='button' value={data.procs[9].category}   className='button torque'></input>
+              </div>
+             
+              
+              
+            
 
-                      <input type='button'  onClick={this.torqueData} value={'Torque'} className='button torque' render={<Cards torque={torque}></Cards>} render={<Title title={data.nameT}></Title>}></input>
-
-                      
-                  </div>
-                  }
-
-                  <div className="cards-container">
-                      <Cards field={field}></Cards>
-                  </div>
-  
+              <div className="cards-container">
+                  <div className='cards'>
+                    <div className='proc-img'><img src='/images/field/2.PNG' alt='pics' ></img></div>
+                      <p className='step'>Test 1</p>
+                    </div>
+              </div>
           </div>
+          
+           
         );
     }
 }
