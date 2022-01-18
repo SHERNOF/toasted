@@ -10,60 +10,52 @@ class MainContent extends Component {
         super()
         this.state = {
             data: data,
-            field: [],
-            pressure: [],
-            torque: [],
+            // field: [],
+            // pressure: [],
+            // torque: [],
             title: '',
-            proc:[]
+            procs:[]
         }
     }
 
     
     
-    
-    fieldData = e => {
-      if(data.nameF === e.target.value){
-        this.setState({ field: data.procF, title: e.target.value });
-        
-      }
-    }
-    pressureData = e => {
-      if(data.nameP === e.target.value){
-        this.setState({ field: data.procP, title: e.target.value })
-      }
-    }
-    torqueData = e => {
-      if(data.nameT === e.target.value){
-        this.setState({ field: data.procT, title: e.target.value })
-      }
-    }
 
-    testing = e => {
-      if(data.procs[0].category === e.target.value){
-        const a = data.procs.filter( x => x.category)
-        this.setState({ procs: a })
+    // torqueData = e => {
+    //   if(data.nameT === e.target.value){
+    //     this.setState({ field: data.procT, title: e.target.value })
+    //   }
+    // }
+
+    procsArray = e => {
+      const y = data.procs.filter( el => el.category === e.target.value)
+      if(y){
+        this.setState({procs: y})
+        this.setState({ title: e.target.value })
       }
     }
     render() {
-        const { data, procs,  } = this.state
+        const { data, procs, title  } = this.state
         console.log(procs)
+        console.log(title)
+
 
         return (
           
           <div className='main-content'>
             
             
-              <div className="title-container">
-                <h2 className='proc-title'>Title</h2>
-              </div>
-
+              {/* <div className="title-container">
+                <h2 className='proc-title'>{title}</h2>
+              </div> */}
+              <Title title={title}></Title>
             
               <div className='button-container'>
-                  <input type='button' onClick={this.testing} value={data.procs[0].category} className='button field'></input>
+                  <input type='button' onClick={this.procsArray} value={'Field'} className='button field'></input>
 
-                  <input type='button' value={data.procs[6].category}   className='button pressure' ></input>
+                  <input type='button' onClick={this.procsArray} value={'Pressure'}   className='button pressure' ></input>
 
-                  <input type='button' value={data.procs[9].category}   className='button torque'></input>
+                  <input type='button' onClick={this.procsArray} value={'Torque'}   className='button torque'></input>
               </div>
              
               
