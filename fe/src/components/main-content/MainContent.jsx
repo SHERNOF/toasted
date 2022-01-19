@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './mainContent.scss'
 import data from '../../data.js'
-import Cards from '../cards/Cards'
 import Title from '../title/Title';
+import MyBtn from '../myBtn/MyBtn';
 
 
 class MainContent extends Component {
@@ -27,7 +27,7 @@ class MainContent extends Component {
     //   }
     // }
 
-    procsArray = e => {
+    handleClick = e => {
       const y = data.procs.filter( el => el.category === e.target.value)
       if(y){
         this.setState({procs: y})
@@ -43,19 +43,18 @@ class MainContent extends Component {
         return (
           
           <div className='main-content'>
-            
-            
-              {/* <div className="title-container">
-                <h2 className='proc-title'>{title}</h2>
-              </div> */}
+    
               <Title title={title}></Title>
             
               <div className='button-container'>
-                  <input type='button' onClick={this.procsArray} value={'Field'} className='button field'></input>
+                  
+                  <MyBtn onClick={this.procsArray} value='Field' className='button field'></MyBtn>
+                
+                  {/* <input type='button' onClick={this.procsArray} value={'Field'} className='button field'></input> */}
 
-                  <input type='button' onClick={this.procsArray} value={'Pressure'}   className='button pressure' ></input>
+                  <input type='button' onClick={this.handleClick} value={'Pressure'}   className='button pressure' ></input>
 
-                  <input type='button' onClick={this.procsArray} value={'Torque'}   className='button torque'></input>
+                  <input type='button' onClick={this.handleClick} value={'Torque'}   className='button torque'></input>
               </div>
              
               
