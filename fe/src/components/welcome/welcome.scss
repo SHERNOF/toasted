@@ -1,0 +1,19 @@
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #d9d9d9,
+    -20px -20px 60px #ffffff;
+    width: 90%;
+    height: 90%;
+
+    
+
+    & h1 {
+        color: rebeccapurple;
+    }
+}

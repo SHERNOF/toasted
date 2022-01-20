@@ -3,6 +3,8 @@ import './mainContent.scss'
 import data from '../../data.js'
 import Title from '../title/Title';
 import MyBtn from '../myBtn/MyBtn';
+import Welcome from '../welcome/Welcome';
+import Cards from '../cards/Cards';
 
 
 class MainContent extends Component {
@@ -10,9 +12,6 @@ class MainContent extends Component {
         super()
         this.state = {
             data: data,
-            // field: [],
-            // pressure: [],
-            // torque: [],
             title: '',
             procs:[]
         }
@@ -44,28 +43,24 @@ class MainContent extends Component {
           
           <div className='main-content'>
     
-              <Title title={title}></Title>
+              { title.length === 0 ? null : <Title title={title}></Title>}
             
               <div className='button-container'>
                   
-                  <MyBtn onClick={this.procsArray} value='Field' className='button field'></MyBtn>
+                  {/* <MyBtn onClick={this.procsArray} value='Field' className='button field'></MyBtn> */}
                 
-                  {/* <input type='button' onClick={this.procsArray} value={'Field'} className='button field'></input> */}
+                  <input type='button' onClick={this.handleClick} value={'Field'} className='button field'></input>
 
                   <input type='button' onClick={this.handleClick} value={'Pressure'}   className='button pressure' ></input>
 
                   <input type='button' onClick={this.handleClick} value={'Torque'}   className='button torque'></input>
+                  
               </div>
              
-              
-              
-            
-
               <div className="cards-container">
-                  <div className='cards'>
-                    <div className='proc-img'><img src='/images/field/2.PNG' alt='pics' ></img></div>
-                      <p className='step'>Test 1</p>
-                    </div>
+                  {
+                    procs.length === 0 ? <Welcome></Welcome> : <Cards procs={procs}></Cards>
+                  }
               </div>
           </div>
           
