@@ -13,6 +13,7 @@ export default function Cards({procs}) {
                   </div>
 
                   <p className='step'>{x.id + '.' + ' ' + x.step}</p>
+                  
               </div>
               )
           }

@@ -27,13 +27,13 @@ const data = {
         {
             id: 5,
             step: 'Select the job assigned from the list of jobs',
-            imageUrl: '/images/field/2.jpeg',
+            imageUrl: '/images/field/4.png',
             category: 'Field'
         },
         {
             id: 6,
             step: 'Select the job assigned from the list of jobs',
-            imageUrl: '/images/field/2.jpeg',
+            imageUrl: '/images/field/4.png',
             category: 'Field'
         },
 
