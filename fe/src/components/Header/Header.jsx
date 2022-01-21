@@ -1,10 +1,11 @@
 import './header.scss'
 import React from 'react'
+// import { Link } from 'react-router-dom'
 
 export default function Header() {
     return (
         <header className='header'>
-            <h1>God is Good</h1>
+            <a href='/' className='logo-container'><img className='logo-tex' src='/images/logo.PNG' alt='logo'/></a >
             <span>Log-In</span>
         </header>
     )
