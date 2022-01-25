@@ -35,7 +35,7 @@ class MainContent extends Component {
     }
     render() {
         const { data, procs, title  } = this.state
-        console.log(procs)
+        console.log(data.procs[0])
         console.log(title)
 
 
