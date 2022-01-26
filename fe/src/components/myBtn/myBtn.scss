@@ -1,6 +1,6 @@
  .button {
     margin-top: .5rem;
-    height: 2rem;
+    height: 2.3rem;
     width: 14rem;
     color: var(--pc);
     font-size: 1rem;
@@ -16,12 +16,10 @@
 
         transition: all .5s;
 
-   
-
-
         &:hover{
             color: #ffffff;
-            background: var(--pc)
+            background: var(--pc);
+            cursor: pointer;
         }
     }
 

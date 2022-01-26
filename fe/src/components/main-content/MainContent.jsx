@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './mainContent.scss'
+import ReactTransitionGroup from 'react-addons-css-transition-group'
 import data from '../../data.js'
 import Title from '../title/Title';
 import MyBtn from '../myBtn/MyBtn';
@@ -13,31 +14,19 @@ class MainContent extends Component {
         this.state = {
             data: data,
             title: '',
-            procs:[]
+            procedure:[]
         }
     }
 
-    
-    
-
-    // torqueData = e => {
-    //   if(data.nameT === e.target.value){
-    //     this.setState({ field: data.procT, title: e.target.value })
-    //   }
-    // }
-
     handleClick = e => {
-      const y = data.procs.filter( el => el.category === e.target.value)
+      const y = data.procs.find(el => el.field === e.target.value)
+      console.log(y)
       if(y){
-        this.setState({procs: y})
-        this.setState({ title: e.target.value })
+        this.setState({ title: e.target.value, procedure: y.procedure })
       }
     }
     render() {
-        const { data, procs, title  } = this.state
-        console.log(data.procs[0])
-        console.log(title)
-
+        const { data, procedure, title  } = this.state
 
         return (
           
@@ -46,25 +35,21 @@ class MainContent extends Component {
               { title.length === 0 ? null : <Title title={title}></Title>}
             
               <div className='button-container'>
-                  
-                  {/* <MyBtn onClick={this.procsArray} value='Field' className='button field'></MyBtn> */}
-                
-                  <input type='button' onClick={this.handleClick} value={'Field'} className='button field'></input>
-
-                  <input type='button' onClick={this.handleClick} value={'Pressure'}   className='button pressure' ></input>
-
-                  <input type='button' onClick={this.handleClick} value={'Torque'}   className='button torque'></input>
-                  
+                {
+                  data.procs.map( x =>
+                    <MyBtn  onClick={this.handleClick} key={x.id} value={x.field} ></MyBtn>
+                  )
+                }
               </div>
              
               <div className="cards-container">
                   {
-                    procs.length === 0 ? <Welcome></Welcome> : <Cards procs={procs}></Cards>
+                    procedure.length === 0 ? <Welcome></Welcome> : <Cards procedure={procedure}></Cards>
                   }
               </div>
+
           </div>
           
-           
         );
     }
 }

@@ -5,18 +5,15 @@
      align-items: center;
      justify-content: flex-start;
     //  border: 1px solid red;
-     background-color: rgb(241, 234, 234);
+     background: rgb(235, 232, 232);
+    // background-image: linear-gradient(to right #1E90FF #F6F9FF);
+    
 
      & .proc-title{
          color: var(--pc);
          font-size: 1.5rem;
+         
      }
 
-    & .example-appear {
-        opacity: 0.1;
-     }
-     & .example-appear.example-appear-active {
-        opacity: 2;
-        transition: opacity 50s ease-in;
-     }
+   
 }
