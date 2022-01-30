@@ -10,7 +10,7 @@ export default function Cards({procedure}) {
                   <div className='proc-img'>
                     <img  alt='pics' src={x.imageUrl}></img>
                   </div>
-                  <p className='step'>{x.id + '.' + ' ' + x.step}</p>
+                  <p className='step'>{x.id + '. ' + x.step}</p>
               </div>
               )
           }

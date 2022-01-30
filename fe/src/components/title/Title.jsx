@@ -1,5 +1,4 @@
 import './title.scss'
-import ReactTransitionGroup from 'react-addons-css-transition-group'
 import React, { useState } from 'react'
 
 export default function Title({title}) {
@@ -8,7 +7,7 @@ export default function Title({title}) {
     console.log(handleChange)
     return (
         <div className="title-container" >
-            <h2 className='proc-title'>{title + ' ' + 'Template Use Procedure'}</h2>
+            <h2 className='proc-title title'>{title + ' ' + 'Template Use Procedure'}</h2>
         </div>
     )
 }
