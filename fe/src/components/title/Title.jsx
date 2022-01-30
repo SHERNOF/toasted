@@ -7,12 +7,8 @@ export default function Title({title}) {
     const handleChange = () => setAnimate(!animate)
     console.log(handleChange)
     return (
-        <ReactTransitionGroup className="title-container" 
-        transitionName='example'
-        transitionAppear = {true} transitionAppearTimeout = {500}
-        transitionENter = {false} transitionLeave = {false}
-        >
-                <h2 className='proc-title'>{title + ' ' + 'Template Use Procedure'}</h2>
-        </ReactTransitionGroup>
+        <div className="title-container" >
+            <h2 className='proc-title'>{title + ' ' + 'Template Use Procedure'}</h2>
+        </div>
     )
 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './mainContent.scss'
-import ReactTransitionGroup from 'react-addons-css-transition-group'
 import data from '../../data.js'
 import Title from '../title/Title';
 import MyBtn from '../myBtn/MyBtn';
@@ -20,7 +19,6 @@ class MainContent extends Component {
 
     handleClick = e => {
       const y = data.procs.find(el => el.field === e.target.value)
-      console.log(y)
       if(y){
         this.setState({ title: e.target.value, procedure: y.procedure })
       }
@@ -47,7 +45,6 @@ class MainContent extends Component {
                     procedure.length === 0 ? <Welcome></Welcome> : <Cards procedure={procedure}></Cards>
                   }
               </div>
-
           </div>
           
         );
