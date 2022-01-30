@@ -36,6 +36,36 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        
+        & .link-button{
+            text-decoration: none;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: .5rem;
+            height: 4rem;
+            width: 80%;
+            color: var(--pc);
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+                border-right: 1px solid #d9d9d9;
+                border-bottom: 1px solid #d9d9d9;
+                background: #ffffff;
+                box-shadow:  5px 5px 20px #d9d9d9,
+                -5px -5px 20px #ffffff;
+
+            transition: all .5s;
+
+            &:hover{
+                color: #ffffff;
+                background: var(--pc);
+                cursor: pointer;
+        }
+        }
     }
 }
 

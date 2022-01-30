@@ -47,8 +47,8 @@ class MainContent extends Component {
                 </div>
                 
                 <div className='createNew-button'>
-                  <Link to='/create-new'>Test</Link>
-                    <MyBtn onClick={this.renderClick} value={'Create New'}></MyBtn>
+                  <Link to='/create-new' className='link-button'>Create New</Link>
+                    
                 </div>
                 
               </div>
