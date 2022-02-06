@@ -10,30 +10,26 @@ import axios from 'axios'
 
 export default function MainContent() {
 
+  const [ procs, setProcs ] = useState([])
+  const [ title, setTitle ] = useState('')
+  const [ contents, setContents ] = useState([])
+
+  console.log(procs.length)
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios.get('/api/procs')
+      const result = await axios.get('/api/procedures')
       setProcs(result.data)
     }
     fetchData()
   }, [])
 
-  const [ procs, setProcs ] = useState([])
-  const [ title, setTitle ] = useState('Test Mic')
-  const [ procedure, setProcedure ] = useState([])
-
- 
- 
-  console.log(procedure.map(el => el))
-  const handleClick = e => {
-    
-    const y = procs.find(el => el.field === e.target.value)
-    console.log(y)
-    setTitle(e.target.value)
-    setProcedure(y)
-    console.log(procedure)
+  function handleClick(e){
+    let items = procs.find( el => el.field === e.target.value )
+    setTitle(e.target.value);
+    setContents(items.procedure)
   }
-
+  
+  
   return (
     <div className='main-content'>
               { 
@@ -43,36 +39,31 @@ export default function MainContent() {
               }
             
               <div className='button-container'>
+              
                 <div className='proc-button'>
                   {
                     procs.map( x =>
                       <MyBtn onClick={handleClick} key={x.id} value={x.field} ></MyBtn>
-                    )
-                  }
+                    )}
                 </div>
-                
                 <div className='createNew-button'>
                   <Link to='/create-new' className='link-button'>Create New</Link>
-                    
-                </div>
-                
+                </div>  
               </div>
              
               <div className="cards-container">
                   {/* {
-                    procedure.length === 0 ? <Welcome></Welcome> : <Cards procedure={procedure}></Cards>
+                    contents.length === 0 ? <Welcome></Welcome> : <Cards contents={contents}></Cards>
                   } */}
-                   {
-                     procedure.map( x => 
-                      <div className='cards' key={x.id}>
-                          <div className='proc-img'>
-                            <img  alt='pics' src={x.imageUrl}></img>
-                          </div>
-                          <p className='step'>{x.id + '. ' + x.step}</p>
-                      </div>
-                      )
-                    }
+                  
+            
+                  {
+                    contents.map( x => 
+                      <Cards key={x.id} x={x}></Cards>
+                    )
+                  }
               </div>
+
           </div>
   )
 }

@@ -1,5 +1,5 @@
 const data = {  
-    procs: 
+    procedures: 
     [
         {
             id: 1,
@@ -131,10 +131,6 @@ const data = {
                     category: 'Field'
                 },
             ]
-        },
-        {
-            id:5,
-            field: 'Create New Procedure'
         },
     ]
    

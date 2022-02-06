@@ -10,10 +10,13 @@ body {
   box-sizing: border-box;
   font-size: 62.5%;
   
+  
   /* typography */
   --pc: #1e90ff;
   --pcd: #70b3f5;
+  --grey: grey;
   background-color: #ffffff;
+  color: var(--grey);
 }
 
 
@@ -45,7 +48,6 @@ button:hover{
 
 li{
   list-style: none;
-  /* text-indent: 0; */
 }
 
 .title-container{

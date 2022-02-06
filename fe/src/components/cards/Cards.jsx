@@ -1,19 +1,15 @@
 import React from 'react'
 
-export default function Cards({procedure}) {
-  console.log(procedure)
+export default function Cards({x}) {
+  console.log(x)
     return (
       <>
-        {/* {
-            procedure.map( x => 
-              <div className='cards' key={x.id}>
-                  <div className='proc-img'>
-                    <img  alt='pics' src={x.imageUrl}></img>
-                  </div>
-                  <p className='step'>{x.id + '. ' + x.step}</p>
+          <div className='cards' >
+              <div className='proc-img'>
+                <img  alt='pics' src={x.imageUrl}></img>
               </div>
-              )
-          } */}
+              <p className='step'>{x.id + '. ' + x.step}</p>
+          </div>
       </>
          
         

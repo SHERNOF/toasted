@@ -1,5 +1,5 @@
 const data = {  
-    procs: 
+    procedures: 
     [
         {
             id: 1,
@@ -54,26 +54,26 @@ const data = {
                 id: 8,
                 step: 'Select pressure from the selection window',
                 imageUrl: '/images/pressure/4.jpeg',
-                category: 'Pressure'
+                category: 'Field'
             },
             {
                 id: 9,
                 step: 'Define NATA or non-NATA type of calibration from the customer',
                 imageUrl: '/images/pressure/3.jpeg',
-                category: 'Pressure'
+                category: 'Field'
             },
     
             {
                 id: 10,
                 step: 'Open the Toast shortcut from the desktop',
                 imageUrl: '/images/torque/6.jpeg',
-                category: 'Torque'
+                category: 'Field'
             },
             {
                 id: 11,
                 step: 'Select pressure from the selection window',
                 imageUrl: '/images/torque/6.jpeg',
-                category: 'Torque'
+                category: 'Field'
             },
             ]
         },
@@ -83,15 +83,16 @@ const data = {
             procedure: [
                 {
                     id: 1,
-                    step: 'Open the Field shortcut from the desktop',
-                    imageUrl: '/images/field/1.PNG',
-                    category: 'Field'
+                    // step: 'Open the Field shortcut from the desktop',
+                    step: 'Sherwin',
+                    imageUrl: '/images/pressure/3.jpeg',
+                    category: 'Pressure'
                 },
                 {
                     id: 2,
                     step: 'Press the DOWNLOAD button to ensure you have the latest job list. Select the job that needs to be done',
-                    imageUrl: '/images/field/2.PNG',
-                    category: 'Field'
+                    imageUrl: '/images/pressure/4.jpeg',
+                    category: 'Pressure'
                 },
             ]
             
@@ -102,15 +103,16 @@ const data = {
             procedure: [
                 {
                     id: 1,
-                    step: 'Open the Field shortcut from the desktop',
-                    imageUrl: '/images/field/1.PNG',
-                    category: 'Field'
+                    // step: 'Open the Field shortcut from the desktop',
+                    step: 'Jedi',
+                    imageUrl: '/images/torque/5.jpeg',
+                    category: 'Torque'
                 },
                 {
                     id: 2,
                     step: 'Press the DOWNLOAD button to ensure you have the latest job list. Select the job that needs to be done',
-                    imageUrl: '/images/field/2.PNG',
-                    category: 'Field'
+                    imageUrl: '/images/torque/6.jpeg',
+                    category: 'Torque'
                 },
             ]
         },
@@ -131,10 +133,6 @@ const data = {
                     category: 'Field'
                 },
             ]
-        },
-        {
-            id:5,
-            field: 'Create New Procedure'
         },
     ]
    
