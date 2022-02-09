@@ -3,6 +3,8 @@
     // border: 1px solid green;
     display: flex;
     flex-direction: column;
+
+
     
 
     & .title-container{
@@ -25,6 +27,8 @@
             align-items: center;
             height: 100%;
             width: 100%; 
+
+            
             
            
             & .myForm{
@@ -32,34 +36,58 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                border: 1px solid var(--grey);
+                // border: 1px solid var(--grey);
                 width: 80%;
                 height: 80%;
                 border-radius: 5px;
-                
+                border-right: 1px solid #d9d9d9;
+                border-bottom: 1px solid #d9d9d9;
+                background: #ffffff;
+                box-shadow:  15px 15px 20px #d9d9d9,
+                            -5px -5px 20px #ffffff;
 
                 & input,
                 label {
                     position: relative;
                     width: 80%;
-                    height: 6%;
-                }
-
-                & input, textarea {
-                    border-radius: 5px;
-                    margin-bottom: 1rem;
-                    margin-top: .2rem;
-                    border: 1px solid var(--grey);
+                    height: 8%;
                 }
 
                 & textarea {
                     width: 80%;
                     height: 30%;
+
+                   
                 }
 
                 & label {
                     font-size: 1rem;
                     // display: none;
+                    z-index: 3;
+                }
+
+                & input, 
+                textarea{
+                    font-family: 'Poppins';
+                    resize: none;
+                    // border-radius: 5px;
+                    margin-bottom: 1rem;
+                    // margin-top: .2rem;
+                    // border: 1px solid var(--grey);
+                    border: none;
+                    border-radius: 5px;
+                    border-right: 1px solid #d9d9d9;
+                    border-bottom: 1px solid #d9d9d9;
+                    background: #ffffff;
+                    box-shadow:  5px 5px 20px #d9d9d9,
+                            -5px -5px 20px #ffffff;
+
+                            &:focus{
+                                outline: none;
+                                padding: .5rem;
+                                overflow: hidden;
+                            }
+                            transition: all .5s;
                 }
             }
         }
